@@ -376,3 +376,85 @@ ul.social {
     letter-spacing: .015rem;
     font-size: .9rem;
 }
+
+.background {
+  height: 25vh;
+  position: relative;
+  background: url(/images/culture_bg.JPG) no-repeat center center;
+  background-size: cover;
+}
+
+.arts-culture-media {
+  position: absolute;
+  bottom: -2em;
+  left: 50%;
+  background: #77287a;
+  color: #fff;
+  transform: translateX(-50%);
+  padding: 1.2rem 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.arts-culture-media h1:before {
+  content: '';
+  border: 1px solid #fff;
+  position: absolute;
+  top: .2em;
+  bottom: .2em;
+  left: .2em;
+  right: .2em;
+}
+
+.programs {
+  display: grid;
+  background: #fff;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: space-evenly;
+  grid-gap: 3em;
+  width: 100%;
+  padding: 5em 0 4em 0;
+}
+
+.program {
+  background: #3876bb;
+  color: #fff;
+  text-align: center;
+  /* padding: 20px; */
+  min-height: 25vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.program h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .8rem;
+  padding: 1rem 0;
+  background: #b83b86;
+  position: absolute;
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 80%;
+}
+
+.program p {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.329);
+  padding: .75em 1em;
+}
+
+.get-involved {
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .55em;
+  font-size: .8em;
+  background: #81bd61;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
