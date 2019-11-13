@@ -10,6 +10,10 @@ h1, h2, h3, p {
     padding: 0;
 }
 
+h1 {
+  font-size: 1.4rem;
+}
+
 .container {
 	width: 80%;
 	margin: 0 auto;
@@ -18,6 +22,7 @@ h1, h2, h3, p {
 header {
   background: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 header::after {
@@ -313,75 +318,22 @@ ul.social {
     font-size: .8rem;
 }
 
-/* VINCENT */
-
-.vince-container {
-    background: url(/images/vincent_main_bio.jpg) no-repeat center center #fff;
-    background-size: cover;
-    width: 100%;
-    min-height: 35vh;
-    position: relative;
-}
-
-.bio {
-    min-height: 65vh;
-    width: 100%;
-    background: #fff;
-    position: relative;
-}
-
-.bio h2 {
-    color: #b83b86;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size: .8rem;
-    text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.bio h1 {
-    color: #fff;
-    padding: 1.2rem 1.5rem;
-    background: #b83b86;
-    text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    top: -5%;
-    transform: translateX(-50%);
-    letter-spacing: .05rem;
-}
-
-.bio h1:before {
-    content: '';
-    border: 1px solid #fff;
-    position: absolute;
-    top: .2em;
-    bottom: .2em;
-    left: .2em;
-    right: .2em;
-}
-
-.bio p {
-    width: 40%;
-    margin: 0 auto;
-    line-height: 2;
-    color: rgb(48, 48, 48);
-    padding: 8% 0 0 0;
-    letter-spacing: .015rem;
-    font-size: .9rem;
-}
+/* PROGRAMS */
 
 .background {
   height: 25vh;
   position: relative;
-  background: url(/images/culture_bg.JPG) no-repeat center center;
+  background: url(/images/programs_bg.JPG) no-repeat center center;
   background-size: cover;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.ddlm {
+  height: 35vh;
+  background: url(/images/dotd_bg.JPG) no-repeat top center;
+  background-size: cover;
+  background-position: 50% 35%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
 }
 
 .arts-culture-media {
@@ -391,8 +343,13 @@ ul.social {
   background: #77287a;
   color: #fff;
   transform: translateX(-50%);
-  padding: 1.2rem 1.5rem;
+  padding: 1.1rem 1.5rem;
   letter-spacing: 0.05rem;
+}
+
+.arts-culture-media h1 {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
 
 .arts-culture-media h1:before {
@@ -405,25 +362,35 @@ ul.social {
   right: .2em;
 }
 
+.programs-container {
+  background: #fff;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
 .programs {
   display: grid;
-  background: #fff;
-  grid-template-columns: 25% 25% 25%;
-  justify-content: space-evenly;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-around;
   grid-gap: 3em;
-  width: 100%;
+  width: 80%;
   padding: 5em 0 4em 0;
 }
 
 .program {
-  background: #3876bb;
+  background: lightgray;
   color: #fff;
   text-align: center;
-  /* padding: 20px; */
   min-height: 25vh;
   position: relative;
   display: flex;
   align-items: flex-end;
+  cursor: pointer;
+}
+
+.program:hover > h3 {
+  background: #77287a;
 }
 
 .program h3 {
@@ -438,23 +405,307 @@ ul.social {
   left: 50%;
   transform: translateX(-50%);
   min-width: 80%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+.program h3:before {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  position: absolute;
+  top: .4em;
+  bottom: .4em;
+  left: .4em;
+  right: .4em;
 }
 
 .program p {
-  text-align: left;
-  background: rgba(0, 0, 0, 0.329);
-  padding: .75em 1em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: .5em 1em;
+  width: 100%;
 }
 
-.get-involved {
+.dia {
+  background: url(/images/ddlm.JPG) no-repeat center center;
+  background-size: 100%;
+}
+
+.tay {
+  background: url(/images/tay.jpg) no-repeat top center;
+  background-size: 100%;
+}
+
+.lax {
+  background: url(/images/latinx.jpg) no-repeat top center;
+  background-size: 110%;
+}
+
+.partners {
+  background: url(/images/pfs.jpg) no-repeat top center;
+  background-size: 120%;
+}
+
+.heal {
+  background: url(/images/healing.jpg) no-repeat top center;
+  background-size: 110%;
+}
+
+.pres {
+  background: url(/images/presente.jpg) no-repeat top center;
+  background-size: 110%;
+}
+
+/* DOTD PROGRAM PAGE */
+
+.dotd-container {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotd {
+  width: 50%;
+  background: #fff;
+  position: relative;
+}
+
+.dotd h1, .dotd h3 {
+  text-transform: uppercase;
+}
+
+.dotd h1 {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  color: #b83b86;
+  font-size: 2.5rem;
+  background: #fff;
+  padding: 1.75rem 2rem 0 2rem;
+  border-top: 6px solid #77287a;
+}
+
+.dotd h3 {
+  color: #77287a;
+  margin-top: 3.5rem;
+  padding-left: 2rem;
+  margin-bottom: 3.5rem;
+  letter-spacing: 1px;
+}
+
+.dotd p {
+  padding-left: 2rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.dotd-links {
+  position: absolute;
+  right: 0;
+  top: -1.25rem;
+  width: 27%;
+}
+
+.dotd-links a {
+  color: #fff;
+  background: #b83b86;
+  padding: .75rem;
+  margin-left: .5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.dotd-links a:before {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  position: absolute;
+  top: .2em;
+  bottom: .2em;
+  left: .2em;
+  right: .2em;
+}
+
+.dotd-web {
+  left: 0;
+}
+
+.dotd-vol {
+  right: 0;
+}
+
+.dotd-links a:hover {
+  background: #77287a;
+}
+
+/* ALL STAFF PAGE */
+
+.staff-background {
+  height: 25vh;
+  position: relative;
+  background: url(/images/staff_bg.jpg) no-repeat top center;
+  background-size: cover;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.staff-container {
+  background: #fff;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.staff {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-around;
+  grid-gap: 3em;
+  width: 80%;
+  padding: 5em 0 4em 0;
+}
+
+.staff-box {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.staff-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.staff-box h3 {
+  font-size: .9rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  letter-spacing: 1px;
+  background: #3f8ec1;
   position: absolute;
   bottom: -1em;
   left: 50%;
   transform: translateX(-50%);
-  padding: .55em;
-  font-size: .8em;
+  min-width: 80%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.staff-box h3 em {
+  font-size: .7rem;
+  font-style: normal;
+  font-weight: 100;
+  letter-spacing: initial;
+}
+
+.staff-box h3:before {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  position: absolute;
+  top: .4em;
+  bottom: .4em;
+  left: .4em;
+  right: .4em;
+}
+
+.staff-box:hover > h3 {
   background: #81bd61;
+}
+
+.staff-h1 {
+  background: #3f8ec1;
+}
+
+/* DIANGO */
+
+.diango-bg {
+  height: 25vh;
+  position: relative;
+  background: url(/images/bio_bg.jpg) no-repeat top center;
+  background-size: cover;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.diango-container {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diango {
+  width: 50%;
+  position: relative;
+}
+
+.diango p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  padding: 3rem 0 0 0;
+}
+
+.profile {
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(/images/Diango.jpg) no-repeat center center;
+  background-size: cover;
+  height: 290px;
+  width: 290px;
+  text-align: center;
+}
+
+/* .arts-culture-media {
+  position: absolute;
+  bottom: -2em;
+  left: 50%;
+  background: #77287a;
   color: #fff;
+  transform: translateX(-50%);
+  padding: 1.1rem 1.5rem;
+  letter-spacing: 0.05rem;
+} */
+
+.profile h1 {
+  font-size: 1.1rem;
   text-transform: uppercase;
+  padding: 1rem 0;
   letter-spacing: 1px;
+  color: #fff;
+  background: #3f8ec1;
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 80%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.profile h1:before {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.619);
+  position: absolute;
+  top: .3em;
+  bottom: .3em;
+  left: .3em;
+  right: .3em;
+}
+
+.diango h3 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: #3876bb;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 200px 0 0 0;
 }
